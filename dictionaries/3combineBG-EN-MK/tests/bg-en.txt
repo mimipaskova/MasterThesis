@@ -1,0 +1,9 @@
+атомна	nuclear
+атомна	atomic
+елен	deer
+елен	ellen
+елен	helene
+изключен	disabled
+изключен	disconnected
+изключен	excluded
+изключен	expelled

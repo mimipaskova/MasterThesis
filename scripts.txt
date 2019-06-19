@@ -1,0 +1,111 @@
+Test with dict 2 - Common words
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 75000 --exp_name CommonWordsSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/commonWords/commonWords.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/CommonWordsSup/kynn0klc2h/vectors-bg.txt --tgt_emb differentDict/CommonWordsSup/kynn0klc2h/vectors-mk.txt --max_vocab 75000 --exp_name CommonWordsEval75 --exp_path differentDict
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/CommonWordsSup/kynn0klc2h/vectors-bg.txt --tgt_emb differentDict/CommonWordsSup/kynn0klc2h/vectors-mk.txt --max_vocab 20000 --exp_name CommonWordsEval20 --exp_path differentDict
+
+
+
+Test with dict 3 - identical chars dict
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 75000 --exp_name IdenticalCharsDictSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/generateIdenticalChars/identicalsDictFull.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/IdenticalCharsDictSup/o9mswpuko9/vectors-bg.txt --tgt_emb differentDict/IdenticalCharsDictSup/o9mswpuko9/vectors-mk.txt --max_vocab 75000 --exp_name IdenticalCharsDictEval75 --exp_path differentDict
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/IdenticalCharsDictSup/o9mswpuko9/vectors-bg.txt --tgt_emb differentDict/IdenticalCharsDictSup/o9mswpuko9/vectors-mk.txt --max_vocab 20000 --exp_name IdenticalCharsDictEval20 --exp_path differentDict
+
+
+Test with dict 4 - combine 1 and 2
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name combineIdenticalCommonWordsSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/combineIdenticalCommon/combineIdenticalCommon.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/combineIdenticalCommonWordsSup/as8809scs3/vectors-bg.txt --tgt_emb differentDict/combineIdenticalCommonWordsSup/as8809scs3/vectors-mk.txt --max_vocab 75000 --exp_name combineIdenticalCommonWordsEval75 --exp_path differentDict
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/combineIdenticalCommonWordsSup/as8809scs3/vectors-bg.txt --tgt_emb differentDict/combineIdenticalCommonWordsSup/as8809scs3/vectors-mk.txt --max_vocab 20000 --exp_name combineIdenticalCommonWordsEval20 --exp_path differentDict
+
+
+
+Test with dict 5 - generated bg words from mk + ngrams
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 75000 --exp_name generatedBgWordsSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/generateBgWords/bg-mk-dict.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/generatedBgWordsSup/bk5ni3x9dt/vectors-bg.txt --tgt_emb differentDict/generatedBgWordsSup/bk5ni3x9dt/vectors-mk.txt --max_vocab 75000 --exp_name generatedBgWordsEval75 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/generatedBgWordsSup/bk5ni3x9dt/vectors-bg.txt --tgt_emb differentDict/generatedBgWordsSup/bk5ni3x9dt/vectors-mk.txt --max_vocab 20000 --exp_name generatedBgWordsEval20 --exp_path differentDict
+
+
+Test with dict 6 - combine 1,2,3
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name generatedBgWordsSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/combineIdenticalCommonGeneratedBg/bgMk.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/generatedBgWordsSup/3hn2sg9x7u/vectors-bg.txt --tgt_emb differentDict/generatedBgWordsSup/3hn2sg9x7u/vectors-mk.txt --max_vocab 75000 --exp_name combineCommonWordsEval75 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/generatedBgWordsSup/3hn2sg9x7u/vectors-bg.txt --tgt_emb differentDict/generatedBgWordsSup/3hn2sg9x7u/vectors-mk.txt --max_vocab 20000 --exp_name combineCommonWordsEval20 --exp_path differentDict
+
+
+Test without dicts  1- dico train identical char
+python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --dico_train identical_char --max_vocab 75000 --exp_name dicoTrainWithoutDict --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/dicoTrainWithoutDict/ko3tnkkd7a/vectors-bg.txt --tgt_emb differentDict/dicoTrainWithoutDict/ko3tnkkd7a/vectors-mk.txt --max_vocab 75000 --exp_name identicalCharsWithoudDictEval75 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/dicoTrainWithoutDict/ko3tnkkd7a/vectors-bg.txt --tgt_emb differentDict/dicoTrainWithoutDict/ko3tnkkd7a/vectors-mk.txt --max_vocab 20000 --exp_name identicalCharsWithoudDictEval20 --exp_path differentDict
+
+
+lcsr with 10000
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name lcsrDictSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/lcsr/filteredWords100000.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/lcsrDictSup/8mlk04i9ko/vectors-bg.txt --tgt_emb differentDict/lcsrDictSup/8mlk04i9ko/vectors-mk.txt --max_vocab 75000 --exp_name lcsrEval75 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/lcsrDictSup/8mlk04i9ko/vectors-bg.txt --tgt_emb differentDict/lcsrDictSup/8mlk04i9ko/vectors-mk.txt --max_vocab 20000 --exp_name lcsrEval20 --exp_path differentDict
+
+
+LCSR - all ngrams
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name lcsrNGramsDictSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/lcsrNgrams/filteredWords100000all.txt
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/lcsrNGramsDictSup/n7po6qmjp1/vectors-bg.txt --tgt_emb differentDict/lcsrNGramsDictSup/n7po6qmjp1/vectors-mk.txt --max_vocab 75000 --exp_name lcsrEval75 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/lcsrNGramsDictSup/n7po6qmjp1/vectors-bg.txt --tgt_emb differentDict/lcsrNGramsDictSup/n7po6qmjp1/vectors-mk.txt --max_vocab 70000 --exp_name lcsrEval70 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/lcsrNGramsDictSup/n7po6qmjp1/vectors-bg.txt --tgt_emb differentDict/lcsrNGramsDictSup/n7po6qmjp1/vectors-mk.txt --max_vocab 20000 --exp_name lcsrEval20 --exp_path differentDict
+
+
+
+Combined all + lcsr
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name combineAllSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/combineIdenticalCommonGeneratedLCSR/words.txt
+
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/combineAllSup/h0qdef4qtp/vectors-bg.txt --tgt_emb differentDict/combineAllSup/h0qdef4qtp/vectors-mk.txt --max_vocab 75000 --exp_name combineAllEval75 --exp_path differentDict
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/combineAllSup/h0qdef4qtp/vectors-bg.txt --tgt_emb differentDict/combineAllSup/h0qdef4qtp/vectors-mk.txt --max_vocab 70000 --exp_name combineAllEval70 --exp_path differentDict
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/combineAllSup/h0qdef4qtp/vectors-bg.txt --tgt_emb differentDict/combineAllSup/h0qdef4qtp/vectors-mk.txt --max_vocab 20000 --exp_name combineAllEval20 --exp_path differentDict
+
+
+Medr - all words (small vec) - 0.7
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name medrSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/medr/filteredWordsAll.txt
+
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/medrSup/587n0xgub0/vectors-bg.txt --tgt_emb differentDict/medrSup/587n0xgub0/vectors-mk.txt --max_vocab 70000 --exp_name medrEval70 --exp_path differentDict
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/medrSup/587n0xgub0/vectors-bg.txt --tgt_emb differentDict/medrSup/587n0xgub0/vectors-mk.txt --max_vocab 20000 --exp_name medrEval20 --exp_path differentDict
+
+
+Medr (same as prev) with different vec files - new files from Fast text
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/cc.bg.300.vec --tgt_emb data/cc.mk.300.vec --n_refinement 5 --max_vocab 70000 --exp_name medrSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/medr/filteredWordsAll.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/medrSup/4x32t502p2/vectors-bg.txt --tgt_emb differentDict/medrSup/4x32t502p2/vectors-mk.txt --max_vocab 70000 --exp_name medrEval70 --exp_path differentDict
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/medrSup/4x32t502p2/vectors-bg.txt --tgt_emb differentDict/medrSup/4x32t502p2/vectors-mk.txt --max_vocab 20000 --exp_name medrEval20 --exp_path differentDict
+
+
+
+
+LCSR - all ngrams with update
+python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name lcsrNGramsDictSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/lcsrNgrams/filteredWordsAllUpdate.txt
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/lcsrNGramsDictSup/1bgr0gti3v/vectors-bg.txt --tgt_emb differentDict/lcsrNGramsDictSup/1bgr0gti3v/vectors-mk.txt --max_vocab 70000 --exp_name lcsrNgramsEval70 --exp_path differentDict
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/lcsrNGramsDictSup/1bgr0gti3v/vectors-bg.txt --tgt_emb differentDict/lcsrNGramsDictSup/1bgr0gti3v/vectors-mk.txt --max_vocab 20000 --exp_name lcsrNgramsEval20 --exp_path differentDict
+
+
+
+Medr - all words - 0.62
+ python supervised.py --src_lang bg --tgt_lang mk --src_emb data/wiki.bg.vec --tgt_emb data/wiki.mk.vec --n_refinement 5 --max_vocab 70000 --exp_name medrSup --exp_path differentDict --dico_train C:/Mimi/SU/diplomna/MUSE/data/crosslingual/customDicts/medr/filteredDictAllFromVec0.62.txt
+
+ python evaluate.py --src_lang bg --tgt_lang mk --src_emb  differentDict/medrSup/g9qm7j6gih/vectors-bg.txt --tgt_emb differentDict/medrSup/g9qm7j6gih/vectors-mk.txt --max_vocab 70000 --exp_name medrEval70 --exp_path differentDict
+
+python evaluate.py --src_lang bg --tgt_lang mk --src_emb differentDict/medrSup/g9qm7j6gih/vectors-bg.txt --tgt_emb differentDict/medrSup/g9qm7j6gih/vectors-mk.txt --max_vocab 20000 --exp_name medrEval20 --exp_path differentDict

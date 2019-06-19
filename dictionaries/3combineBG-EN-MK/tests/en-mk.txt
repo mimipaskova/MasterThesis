@@ -1,0 +1,15 @@
+disabled	хендикепираните
+disabled	исклучено
+disabled	оневозможена
+disabled	оневозможени
+disabled	онеспособени
+disabled	оневозможено
+atomic	атомска
+atomic	атомски
+deer	срна
+deer	елен
+deer	елени
+expelled	избркан
+expelled	исфрлен
+expelled	протерани
+expelled	истерани
