@@ -1,11 +1,12 @@
-This Repo has two folders
+## This Repo contains two folders
 
-MUSE - https://github.com/facebookresearch/MUSE - library from Facebook
-We did some small changes in word_translation.py
+### MUSE - https://github.com/facebookresearch/MUSE - library from Facebook. 
+(We did some small changes in word_translation.py)
 
-dictionaries - folder with all source and tests of our dictionaries
+### dictionaries - folder with all source and tests of our dictionaries
 
-Steps to run:
+### Steps to run:
+
 1. Install all MUSE dependences (there is README in MUSE folder)
 2. Install all dependences for dictionaries (there is README in dictionaries folder)
 3. You can run some of scripts from scripts.txt file in MUSE folder when you move some dictionaries in MUSE/data.crosslingual/dictionaries folder
