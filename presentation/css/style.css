@@ -1,0 +1,76 @@
+#bored {
+	color: #808080;
+}
+
+.occ-center {
+	text-align: center;
+}
+
+#dfd img{
+	/*background-image: url(dfd.jpg);*/
+	height: 700px;
+  	
+}
+
+.numbered {
+	list-style: decimal;	
+}
+
+.interview {
+	margin: 0px;
+	display: inline;
+  	width: 400px;
+}
+
+.img-interview {
+	display: block;
+  	margin: auto;
+}
+
+.actor-usecase {
+	width: 1358px;
+
+}
+
+.actor-usecase img {
+	width: 1200px;
+	height: 834px;
+}
+
+.first-use-cases {
+	color: red;
+}
+
+.second-use-cases {
+	color: blue;
+}
+
+.demo {
+	width: 800px;
+	height: 400px;
+}
+
+.tech-image {
+	width: 150px;
+	height: 100px;
+}
+
+.dest-activity {
+	width: 1000px;
+	height: 760px;
+}
+
+.logo {
+	width: 556px;
+    height: 400px;
+}
+
+.muse {
+	width: 1185px;
+    height: 212px;
+}
+
+.branches {
+	width: 886px;
+	height: 656px;
+}
